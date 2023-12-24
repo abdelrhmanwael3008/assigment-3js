@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="./css/all.min.css.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    
+        <h1 class="text-center mt-5 position-relative">Bookmarker</h1>
+  <div class="container">
+        <div class="mt-5 bodydiv">
+            <h2 class="text-center mt-4"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+            <div>
+                <label class="my-4" for="inputname"><i class="fa-solid fa-book-bookmark pe-2"></i>   Site Name</label>
+            <input oninput="validationname()" minlength="4" placeholder="Bookmark Name" id="inputname" type="text " class="form-control" >
+            </div>
+            <div>
+                <label class="mt-4" for="inputurl"><i class="fa-solid fa-link pe-2"></i> Site URL</label>
+            <input oninput="validationurl()" minlength="4" placeholder="Website URL " id="inputurl" type="text" class="form-control mt-2">
+            </div>
+           <div class="d-flex justify-content-center align-items-center mt-2">
+            <button onclick="additem()" type="submit" class="btn btn-danger btn-group-lg my-4 bts px-5">submit</button>
+           </div>
+        </div>
+        
+        
+        <table class="table text-center mt-4">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>delete</th>
+                </tr>
+
+               
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+        <div id="box"  class=" d-none box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center">
+            <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+              <header class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+                <div class="circles d-flex">
+                  <span class="rounded-circle me-2"></span>
+                  <span class="rounded-circle me-2"></span>
+                  <span class="rounded-circle me-2"></span>
+                </div>
+                <button onclick="closeAleret()" class="btn border-0" id="closeBtn">
+                  <i class="fa-solid fa-xmark close fs-3"></i>
+                </button>
+              </header>
+              <p class="m-0 pb-2">
+                Site Name or Url is not valid, Please follow the rules below :
+              </p>
+              <ol class="rules list-unstyled m-0">
+                <li>
+                  <i class="fa-regular fa-circle-right p-2"></i>Site name must
+                  contain at least 3 characters
+                </li>
+                <li>
+                  <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+                  valid one
+                </li>
+              </ol>
+            </div>
+          </div>
+    </div>  
+    
+    <script src="./js/index.js"></script>
+
+</body>
+</html>
